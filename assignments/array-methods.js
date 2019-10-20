@@ -99,8 +99,41 @@ console.log(ticketPriceTotal);
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
+
+const storyPlot = [
+  {'name': 'sorcha', 'class': 'healer', 'alignment': 'protaganist', 'motivation': 'children'},
+  {'name': 'cairn', 'class': 'brawler', 'alignment': 'protaganist', 'motivation': 'revenge'},
+  {'name': 'dairmund', 'class':'necro', 'alignment': 'antaganist', 'motivation': 'divine plan'}
+];
+
 // Problem 1
+
+// const charaMotivation = [];
+
+let charaMotivation = [];
+
+charaMotivation = storyPlot.filter (chara => 
+  chara.motivation === 'revenge');
+
+console.log(charaMotivation);
 
 // Problem 2
 
+let heroChara = [];
+
+heroChara = storyPlot.map (hero => 
+  hero.alignment
+  );
+
+console.log(heroChara);
+
 // Problem 3
+
+let heroName = [];
+
+storyPlot.forEach ( name => {
+  let addName = `${name.name}`;
+  heroName.push(addName);
+})
+
+console.log(heroName);
